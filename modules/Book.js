@@ -9,7 +9,7 @@ export default class Book {
     }
   }
 
-  createNode() {
+  createNode = () => {
     const bookNode = document.createElement('li');
     const btn = document.createElement('button');
     btn.textContent = 'Remove';

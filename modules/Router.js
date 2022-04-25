@@ -4,7 +4,7 @@ export default class Router {
     this.navigate(this.route);
   }
 
-  navigate(to) {
+  navigate = (to) => {
     const sections = document.querySelectorAll('section');
     sections.forEach((section) => {
       if (section.classList.contains(to)) {

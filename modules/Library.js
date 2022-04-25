@@ -11,19 +11,19 @@ export class Library {
     }
   }
 
-  addBook(book) {
+  addBook = (book) => {
     this.books.push(book);
     this.render();
     this.saveBooks();
   }
 
-  removeBook(id) {
+  removeBook = (id) => {
     this.books = this.books.filter((book) => book.id !== id);
     this.render();
     this.saveBooks();
   }
 
-  render() {
+  render = () => {
     this.booksContainer.innerHTML = '';
     if (this.books.length === 0) {
       this.booksContainer.innerHTML = '<h3>There are no books.</h3>';
@@ -38,7 +38,7 @@ export class Library {
     }
   }
 
-  saveBooks() {
+  saveBooks = () => {
     localStorage.setItem('books', JSON.stringify(this.books));
   }
 }
