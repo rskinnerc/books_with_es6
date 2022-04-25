@@ -28,10 +28,16 @@ export class Library {
     if (this.books.length === 0) {
       this.booksContainer.innerHTML = '<h3>There are no books.</h3>';
       return;
+    } else {
+      for (let i = 0; i < this.books.length; i += 1) {
+        let { bookNode, btn } = this.books[i].createNode();
+        btn.addEventListener('click', () => {
+          this.removeBook(this.books[i].id);
+        })
+        this.booksContainer.append(bookNode);
+      }
     }
-    for (let i = 0; i < this.books.length; i += 1) {
-      this.booksContainer.append(this.books[i].createNode());
-    }
+
   }
 
   saveBooks() {

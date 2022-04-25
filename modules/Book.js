@@ -10,11 +10,15 @@ export class Book {
   }
 
   createNode() {
-    const node = document.createElement('li');
-    node.innerHTML = `
-        <span><span class="book-title">${this.title}</span> by ${this.author}</span> <button onclick="display.removeBook(${this.id})">Remove</button>
-    `;
+    const bookNode = document.createElement('li');
+    const btn = document.createElement('button');
+    btn.textContent = 'Remove';
 
-    return node;
+    bookNode.innerHTML = `
+        <span>'${this.title}' by ${this.author}</span> 
+    `;
+    bookNode.append(btn);
+
+    return { bookNode, btn };
   }
 }
