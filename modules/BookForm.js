@@ -1,5 +1,5 @@
-import { Book } from './Book.js'
-import { library } from "./Library.js";
+import Book from './Book.js';
+import { library } from './Library.js';
 
 export class BookForm {
   constructor() {
@@ -18,3 +18,5 @@ export class BookForm {
     this.form.reset();
   }
 }
+
+export default new BookForm();
