@@ -14,9 +14,7 @@ const router = new Router('list');
 
 routerLinks.forEach((link) => {
   link.addEventListener('click', (e) => {
-    e.preventDefault()
-    router.navigate(link.dataset.to)
+    e.preventDefault();
+    router.navigate(link.dataset.to);
   });
-})
-
-
+});

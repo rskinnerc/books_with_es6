@@ -5,7 +5,11 @@ section.hidden {
 body {
   padding: 2em 5em;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 16;
+  font-size: 16px;
+}
+
+header ul {
+  display: flex;
 }
 
 header,
@@ -21,10 +25,6 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 1em 2em;
-}
-
-header ul {
-  display: flex;
 }
 
 header ul a {
@@ -77,6 +77,12 @@ section h2 {
   font-weight: 600;
 }
 
+button {
+  box-shadow: 2px 2px black;
+  border: 2px solid black;
+  padding: 0.3em 0.6em;
+}
+
 section form button {
   align-self: flex-end;
 }
@@ -94,12 +100,6 @@ section form input:focus {
 section.contact ul {
   list-style: disc;
   padding-left: 1.5em;
-}
-
-button {
-  box-shadow: 2px 2px black;
-  border: 2px solid black;
-  padding: 0.3em 0.6em;
 }
 
 footer {
