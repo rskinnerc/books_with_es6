@@ -15,6 +15,7 @@ export class BookForm {
 
     library.addBook(newBook);
 
+    this.form.title.focus();
     this.form.reset();
   }
 }
