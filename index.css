@@ -1,3 +1,74 @@
 .hidden {
   display: none;
 }
+
+body {
+  padding: 2em 5em;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 16;
+}
+
+header,
+section.list ul,
+footer {
+  border: 2px solid black;
+  box-shadow: 2px 2px rgb(43, 42, 42);
+}
+
+header,
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+}
+
+header ul {
+  display: flex;
+}
+
+header ul a {
+  text-decoration: none;
+  color: black;
+}
+
+header ul li:nth-child(-n+2)::after {
+  content: '|';
+  padding: 0 2em;
+}
+
+#today {
+  text-align: right;
+  padding: 1em 0;
+}
+
+section.list {
+  padding: 1em 0;
+}
+
+section.list h1 {
+  font-weight: 700;
+  text-align: center;
+  margin: 1em 0;
+}
+
+section.list ul li {
+  padding: 0.5em 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+section.list ul li:nth-child(odd) {
+  background-color: rgb(180, 180, 180);
+}
+
+button {
+  box-shadow: 2px 2px black;
+  border: 2px solid black;
+  padding: 0.3em 0.6em;
+}
+
+footer {
+  margin-top: 2em;
+}
